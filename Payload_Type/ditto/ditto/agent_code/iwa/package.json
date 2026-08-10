@@ -1,0 +1,26 @@
+{
+  "name": "ditto-iwa",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "generate-keys": "node scripts/generate-keys.mjs",
+    "bundle-info": "node scripts/write-bundle-info.mjs",
+    "build:wbn": "npm run generate-keys && webpack --config webpack.wbn.cjs && npm run bundle-info"
+  },
+  "devDependencies": {
+    "@types/w3c-direct-sockets": "^0.0.2",
+    "copy-webpack-plugin": "^14.0.0",
+    "css-loader": "^7.1.4",
+    "html-webpack-plugin": "^5.6.7",
+    "style-loader": "^4.0.0",
+    "vite": "^7.3.1",
+    "wbn-sign": "^0.3.1",
+    "webbundle-webpack-plugin": "^0.2.0",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "/",
+  "short_name": "Google Chrome",
+  "name": "Google Chrome",
+  "version": "0.1.0",
+  "icons": [
+    {
+      "src": "/images/icon-16.png",
+      "type": "image/png",
+      "sizes": "16x16",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-32.png",
+      "type": "image/png",
+      "sizes": "32x32",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-48.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "scope": "/",
+  "isolated_storage": true,
+  "permissions_policy": {
+    "cross-origin-isolated": [
+      "self"
+    ],
+    "direct-sockets": [
+      "self"
+    ],
+    "direct-sockets-private": [
+      "self"
+    ],
+    "local-network": [
+      "self"
+    ],
+    "loopback-network": [
+      "self"
+    ]
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}

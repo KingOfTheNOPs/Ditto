@@ -1,0 +1,231 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f8fafd;
+  color: #202124;
+  font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.cover {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.update-panel {
+  width: min(520px, 100%);
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.chrome-mark {
+  width: 72px;
+  height: 72px;
+}
+
+.update-panel h1 {
+  color: #202124;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.update-panel p {
+  color: #5f6368;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.fine-print {
+  font-size: 12px !important;
+}
+
+.progress {
+  width: min(360px, 100%);
+  height: 4px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #dfe5f2;
+}
+
+.progress span {
+  display: block;
+  width: 42%;
+  height: 100%;
+  border-radius: inherit;
+  background: #1a73e8;
+  animation: progress-slide 1.35s ease-in-out infinite;
+}
+
+@keyframes progress-slide {
+  0% {
+    transform: translateX(-110%);
+  }
+
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+body:not(.debug-ui) #debug {
+  display: none;
+}
+
+body.debug-ui {
+  background: #0b1020;
+  color: #e5edf8;
+}
+
+body.debug-ui #cover {
+  display: none;
+}
+
+.shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.panel {
+  width: min(980px, 100%);
+  border: 1px solid #23304d;
+  border-radius: 8px;
+  background: #10172a;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  padding: 24px;
+}
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  border-bottom: 1px solid #22304a;
+  padding-bottom: 18px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h2 {
+  color: #93c5fd;
+  font-size: 13px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+p {
+  color: #93a4bd;
+  margin-top: 6px;
+}
+
+.health {
+  min-width: 92px;
+  border-radius: 4px;
+  border: 1px solid #334155;
+  color: #dbeafe;
+  padding: 7px 10px;
+  text-align: center;
+}
+
+.health.ok {
+  border-color: #059669;
+  color: #86efac;
+}
+
+.health.warn {
+  border-color: #d97706;
+  color: #fcd34d;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 20px;
+}
+
+dl {
+  margin: 0;
+}
+
+dl div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+dt {
+  color: #94a3b8;
+}
+
+dd {
+  margin: 0;
+  color: #e2e8f0;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  border: 1px solid #334155;
+  border-radius: 4px;
+  background: #172033;
+  color: #dbeafe;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+button:hover {
+  background: #1e2a44;
+}
+
+.log {
+  min-height: 260px;
+  max-height: 360px;
+  overflow: auto;
+  white-space: pre-wrap;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  background: #070b16;
+  color: #bfdbfe;
+  margin: 20px 0 0;
+  padding: 12px;
+}
+
+@media (max-width: 720px) {
+  .masthead,
+  .grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+}

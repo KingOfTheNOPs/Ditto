@@ -1,0 +1,48 @@
+[package]
+name = "ditto_native_host"
+version = "0.1.0"
+edition = "2024"
+build = "build.rs"
+
+[features]
+default = []
+cmd_ls = []
+cmd_ps = ["dep:windows-sys", "windows-sys/Win32_Foundation", "windows-sys/Win32_System_Diagnostics_ToolHelp"]
+cmd_upload = []
+cmd_download = []
+cmd_coffexec = []
+cmd_iwa = [
+  "dep:windows-sys",
+  "windows-sys/Win32_Foundation",
+  "windows-sys/Win32_Graphics_Gdi",
+  "windows-sys/Win32_Security",
+  "windows-sys/Win32_System_StationsAndDesktops",
+  "windows-sys/Win32_System_Threading",
+  "windows-sys/Win32_UI_WindowsAndMessaging",
+]
+debug_log = []
+
+[dependencies]
+aes-gcm = { version = "0.10", features = ["aes"] }
+base64 = "0.22"
+getrandom = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+windows-sys = { version = "0.61", optional = true, default-features = false }
+zeroize = "1"
+
+[build-dependencies]
+base64 = "0.22"
+getrandom = "0.3"
+
+[profile.release]
+codegen-units = 1
+debug = false
+debug-assertions = false
+incremental = false
+lto = "fat"
+opt-level = "z"
+overflow-checks = false
+panic = "abort"
+strip = "symbols"

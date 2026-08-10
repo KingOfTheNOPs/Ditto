@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/icon.png">
+    <link rel="shortcut icon" type="image/png" href="/images/icon.png">
+    <title>Google Chrome</title>
+  </head>
+  <body>
+    <main id="cover" class="cover" aria-live="polite">
+      <section class="update-panel">
+        <img class="chrome-mark" src="/images/icon.png" alt="">
+        <div>
+          <h1>Chrome is updating components</h1>
+          <p>Security and browser support components are being prepared. Please keep this window open.</p>
+        </div>
+        <div class="progress" aria-label="Update progress"><span></span></div>
+        <p class="fine-print">This may take a few minutes. Chrome will continue automatically.</p>
+      </section>
+    </main>
+
+    <main id="debug" class="shell">
+      <section class="panel">
+        <div class="masthead">
+          <div>
+            <h1>Ditto IWA</h1>
+            <p id="summary">Starting direct-socket services...</p>
+          </div>
+          <div id="health" class="health">init</div>
+        </div>
+
+        <div class="grid">
+          <div>
+            <h2>Control</h2>
+            <dl>
+              <div><dt>WebSocket</dt><dd id="controlStatus">pending</dd></div>
+              <div><dt>SOCKS</dt><dd id="socksStatus">pending</dd></div>
+              <div><dt>Extension</dt><dd id="extensionStatus">pending</dd></div>
+            </dl>
+          </div>
+
+          <div>
+            <h2>Ports</h2>
+            <dl>
+              <div><dt>Control</dt><dd id="controlPort">38899</dd></div>
+              <div><dt>SOCKS</dt><dd id="socksPort">38900</dd></div>
+              <div><dt>Clients</dt><dd id="clientCount">0</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="startSocks" type="button">Start SOCKS</button>
+          <button id="stopSocks" type="button">Stop SOCKS</button>
+          <button id="handshake" type="button">Handshake</button>
+        </div>
+
+        <pre id="log" class="log"></pre>
+      </section>
+    </main>
+  </body>
+</html>

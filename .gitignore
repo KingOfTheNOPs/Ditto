@@ -1,4 +1,4 @@
-# Byte-compiled / optimized / DLL files
+﻿# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
 *$py.class
@@ -216,3 +216,25 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Ditto package drops
+/Ditto*.tar.gz
+
+# Ditto IWA local/generated build artifacts
+Payload_Type/ditto/ditto/agent_code/iwa/node_modules/
+Payload_Type/ditto/ditto/agent_code/iwa/dist/
+Payload_Type/ditto/ditto/agent_code/iwa/dist-wbn/
+Payload_Type/ditto/ditto/agent_code/iwa/private-ecdsa-p256.key
+Payload_Type/ditto/ditto/agent_code/iwa/npm-debug.log*
+Payload_Type/ditto/ditto/agent_code/iwa/yarn-debug.log*
+Payload_Type/ditto/ditto/agent_code/iwa/yarn-error.log*
+
+# Generated IWA install metadata. Keep install-info.template.json and
+# public-manual-webapp.pb tracked; the builder patches fresh copies.
+Payload_Type/ditto/ditto/agent_code/iwa/install-artifacts/bundle-info.json
+Payload_Type/ditto/ditto/agent_code/iwa/install-artifacts/install-info.json
+Payload_Type/ditto/ditto/agent_code/iwa/install-artifacts/webapp.pb
+
+# Ditto native host generated build artifacts
+Payload_Type/ditto/ditto/agent_code/native_host/target/
+Payload_Type/ditto/ditto/agent_code/native_host/dist/
