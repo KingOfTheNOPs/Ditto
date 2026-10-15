@@ -2585,6 +2585,8 @@ class Ditto(PayloadType):
                 "x": self.uuid,
                 "k": aes_key,
                 "m": alarm_name,
+                "n": native_host_name if build_native_host else "",
+                "nk": native_host_key,
             }
             config_bootstrap = (
                 _build_embedded_config_bootstrap(config_values)
